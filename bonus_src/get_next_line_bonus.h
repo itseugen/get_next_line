@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eweiberl <eweiberl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eweiberl <eweiberl@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:28:22 by eweiberl          #+#    #+#             */
-/*   Updated: 2023/04/25 14:35:25 by eweiberl         ###   ########.fr       */
+/*   Updated: 2023/04/25 14:57:03 by eweiberl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -24,8 +28,4 @@ char	*free_line(char	*str);
 char	*set_line(char *str);
 char	*read_till(int fd, char *str);
 char	*get_next_line(int fd);
-#endif
-
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1024
 #endif
