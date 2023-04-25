@@ -6,12 +6,12 @@
 /*   By: eweiberl <eweiberl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:28:22 by eweiberl          #+#    #+#             */
-/*   Updated: 2023/04/24 17:28:25 by eweiberl         ###   ########.fr       */
+/*   Updated: 2023/04/25 14:35:25 by eweiberl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>

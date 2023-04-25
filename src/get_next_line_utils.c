@@ -21,15 +21,18 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1)
 	{
 		s1 = malloc(sizeof(char));
+		if (!s1)
+			return (NULL);
 		s1[0] = 0;
 	}
-	if (!s1)
-		return (NULL);
 	if (!s2)
 		return (s1);
 	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (str == NULL)
+	{
+		free(s1);
 		return (NULL);
+	}
 	str[0] = '\0';
 	ft_strlcat(str, s1, ft_strlen(s1) + 1);
 	ft_strlcat(str, s2, ft_strlen(s1) + ft_strlen(s2) + 1);

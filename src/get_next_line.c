@@ -65,7 +65,9 @@ char	*set_line(char *str)
 		return (NULL);
 	while (str[i] != '\n' && str[i] != '\0')
 		i++;
-	line = malloc((i + 2) * sizeof(char));
+	if (str[i] == '\n')
+		i++;
+	line = malloc((i + 1) * sizeof(char));
 	if (!line)
 		return (NULL);
 	i = 0;
@@ -76,10 +78,7 @@ char	*set_line(char *str)
 	}
 	line[i] = str[i];
 	if (line[i] != '\0')
-	{
-		i++;
-		line[i] = '\0';
-	}
+		line[++i] = '\0';
 	return (line);
 }
 
